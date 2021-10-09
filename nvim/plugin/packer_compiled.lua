@@ -89,6 +89,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
   ["nvim-notify"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-notify"

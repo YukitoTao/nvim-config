@@ -15,6 +15,7 @@ return require('packer').startup(function()
   -- ======================================= --
   --       Syntax Highlight Plugins          --
   --       Theme Plugins                     --
+  --       UI                                --
   -- ======================================= --
   use {
     'folke/tokyonight.nvim',
@@ -41,4 +42,10 @@ return require('packer').startup(function()
   use 'airblade/vim-gitgutter'
   use 'zivyangll/git-blame.vim'
   use 'tpope/vim-fugitive'
+
+  -- ======================================= --
+  --    Language Server Protocol Plugins     --
+  --    Autocompletion Plugins               -- 
+  -- ======================================= --
+  use 'neovim/nvim-lspconfig'
 end)
