@@ -77,6 +77,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/fzf.vim"
   },
+  ["git-blame.vim"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/git-blame.vim"
+  },
   indentLine = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/indentLine"
@@ -85,21 +89,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nerdtree"
   },
-  ["nvim-treesitter"] = {
+  ["nvim-notify"] = {
     loaded = true,
-    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-notify"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
-  playground = {
-    loaded = true,
-    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/playground"
-  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-gitgutter"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
   }
 }
 

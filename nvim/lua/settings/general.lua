@@ -1,3 +1,6 @@
+-- Copy to cliphoard
+vim.opt.clipboard='unnamedplus'
+
 -- General Neo-Vim configuration 
 vim.opt.title=true
 vim.opt.encoding='utf-8'

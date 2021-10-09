@@ -1,8 +1,4 @@
-require('nvim-treesitter.configs').setup {
-  ensure_installed = {
-    'javascript',
-    'tsx',
-    'typescript'
-  }, 
-}
-
+require('notify')(
+  "Please install following LSP to enable this feature.\nRun:",
+  "warn"
+)
