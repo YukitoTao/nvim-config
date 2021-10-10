@@ -113,6 +113,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-notify"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/packer.nvim"

@@ -11,3 +11,26 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 require('lspconfig').r_language_server.setup{
   capabilities = capabilities,
 }
+
+-- Syntax highlighting
+require('nvim-treesitter.configs').setup {
+  ensure_installed = {
+    'r'
+  },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+    custom_captures = {
+      ["foo.bar"] = "Identifier",
+    },
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
+  },
+}

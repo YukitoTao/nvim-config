@@ -21,6 +21,10 @@ return require('packer').startup(function()
     'folke/tokyonight.nvim',
     branch = 'main'
   }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
 
   -- ======================================= --
   --             Finder Plugins              --
