@@ -125,6 +125,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/tokyonight.nvim"
   },
+  ["vim-commentary"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-commentary"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-fugitive"
