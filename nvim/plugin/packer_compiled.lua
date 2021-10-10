@@ -69,6 +69,18 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  cmp_luasnip = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
+  },
   fzf = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/fzf"
@@ -88,6 +100,10 @@ _G.packer_plugins = {
   nerdtree = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nerdtree"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
