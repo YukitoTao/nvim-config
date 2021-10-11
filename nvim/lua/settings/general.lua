@@ -6,6 +6,7 @@ vim.opt.title=true
 vim.opt.encoding='utf-8'
 vim.opt.mouse='a'
 vim.opt.cursorline=true
+vim.opt.autoread=true
 
 -- “Hybrid” line numbers
 -- Automatic toggling between line number modes

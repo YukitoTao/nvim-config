@@ -1,5 +1,5 @@
 require('notify')(
-  "Setting Language Server Protocol for Javascript project...\n\nPlease install following packages:\n  npm i -g vscode-langservers-extracted stylelint-lsp typescript typescript-language-server\n\nIgnore this message if those packages already installed.",
+  "Setting Language Server Protocol for Javascript project...\nPlease install following packages:\n  npm i -g vscode-langservers-extracted stylelint-lsp typescript typescript-language-server\n\nSetting code formating...\nPlease install the following packages:\n  npm i -g prettier prettier-eslint eslint",
   "info"
 )
 -- Add additional capabilities supported by nvim-cmp
@@ -18,6 +18,9 @@ require('lspconfig').tsserver.setup{
 
 -- Syntax highlighting
 require('nvim-treesitter.configs').setup {
+  autotag = {
+    enable = true,
+  },
   ensure_installed = {
     'javascript', 'html', 'jsdoc', 'json', 'jsonc',
     'scss', 'tsx', 'typescript'

@@ -117,6 +117,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/packer.nvim"
