@@ -9,8 +9,22 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Language server protocol
-require('lspconfig').pylsp.setup{
+require('lspconfig').pylsp.setup {
   capabilities = capabilities,
+  filetypes = { 'python' },
+  cmd = { 'pylsp' },
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = { 
+          maxLineLength = 120
+        },
+        flake8 = {
+          maxLineLength = 120
+        }
+      }
+    }
+  }
 }
 
 -- Syntax highlighting
