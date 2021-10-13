@@ -1,9 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true }
 
--- Prettier formating
-vim.cmd[[nnoremap <leader>p :silent !prettier-eslint % --write<CR>]]
-
 -- Termial shortcuts
 vim.cmd[[:tnoremap <Esc> <C-\><C-n>]]
 keymap('n', '<leader>vt', ':vsplit<CR><C-w>w:vertical resize 50<CR>:terminal<CR>', { noremap=true, silent=true })

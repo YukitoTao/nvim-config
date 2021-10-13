@@ -60,6 +60,8 @@ return require('packer').startup(function()
 
   -- ======================================= --
   --          Commentary Plugins             --
+  --          Formatter Plugins              --
   -- ======================================= --
   use 'tpope/vim-commentary'
+  use 'mhartington/formatter.nvim'
 end)
