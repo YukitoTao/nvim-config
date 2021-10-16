@@ -1,3 +1,6 @@
+-- NERDTree show hidden file
+vim.cmd[[:let NERDTreeShowHidden=1]]
+
 -- Copy to cliphoard
 vim.opt.clipboard='unnamedplus'
 

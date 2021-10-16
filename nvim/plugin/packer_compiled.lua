@@ -81,6 +81,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+  },
   fzf = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/fzf"

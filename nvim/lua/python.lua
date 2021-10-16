@@ -1,6 +1,6 @@
 -- Notify message manager
 require('notify')(
-  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install 'python-lsp-server[all] black isort'\n  yarn global add diagnostic-languageserver",
+  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install 'python-lsp-server[all]' black isort\n  yarn global add diagnostic-languageserver",
   "info"
 )
 
@@ -17,10 +17,10 @@ require('lspconfig').pylsp.setup {
     pylsp = {
       plugins = {
         pycodestyle = { 
-          maxLineLength = 120
+          maxLineLength = 80
         },
         flake8 = {
-          maxLineLength = 120
+          maxLineLength = 80
         }
       }
     }
