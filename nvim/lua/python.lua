@@ -1,13 +1,11 @@
 -- Notify message manager
 require("notify")(
-  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install 'python-lsp-server[all]' black isort\n  yarn global add diagnostic-languageserver",
+  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install 'python-lsp-server[all]' black isort 'ipython[all]'\n  yarn global add diagnostic-languageserver\n\nIgnore this message if those packages already installed.",
   "info"
 )
 
-
 -- Python for Data Science
 vim.cmd[[let g:slime_target = "neovim"]]
-vim.cmd[[let g:slime_preserve_curpos = 0]]
 vim.cmd[[let g:slime_dont_ask_default = 1]]
 vim.cmd[[let g:slime_cell_delimiter = "#%%"]]
 

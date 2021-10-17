@@ -1,5 +1,5 @@
 require('notify')(
-  "Setting Language Server Protocol for Javascript project...\n\nPlease install following packages:\n  npm i -g vscode-langservers-extracted stylelint-lsp \\\n           typescript typescript-language-server\\\n           prettier prettier-eslint eslint\n  yarn global add diagnostic-languageserver",
+  "Setting Language Server Protocol for Javascript project...\n\nPlease install following packages:\n  npm i -g vscode-langservers-extracted stylelint-lsp \\\n           typescript typescript-language-server\\\n           prettier prettier-eslint eslint\n  yarn global add diagnostic-languageserver\n\nIgnore this message if those packages already installed.",
   "info"
 )
 
