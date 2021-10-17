@@ -21,7 +21,7 @@ function _G.StartREPL()
   ]], true)
 end
 
-vim.api.nvim_set_keymap('n', '<leader>vrepl', ':vsplit<CR><C-w>w:vertical resize 50<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
+vim.api.nvim_set_keymap('n', '<leader>vrepl', ':vsplit<CR><C-w>w:vertical resize 60<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
 vim.api.nvim_set_keymap('n', '<leader>repl', ':split<CR><C-w>j:resize 12<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
 
 -- Syntax highlighting
@@ -61,10 +61,12 @@ require("lspconfig").pylsp.setup {
     pylsp = {
       plugins = {
         pycodestyle = { 
-          maxLineLength = 120
+          maxLineLength = 120,
+          ignore = { "E402" }
         },
         flake8 = {
-          maxLineLength = 120
+          maxLineLength = 120,
+          ignore = { "E402" }
         }
       }
     }
