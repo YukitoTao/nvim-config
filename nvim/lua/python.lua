@@ -26,9 +26,6 @@ end
 vim.api.nvim_set_keymap('n', '<leader>vrepl', ':vsplit<CR><C-w>w:vertical resize 50<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
 vim.api.nvim_set_keymap('n', '<leader>repl', ':split<CR><C-w>j:resize 12<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
 
--- Setup Python provider
-vim.cmd[[let g:python3_host_prog="~/.pyenv/shims/python"]]
-
 -- Syntax highlighting
 require("nvim-treesitter.configs").setup {
   ensure_installed = {
@@ -61,6 +58,7 @@ require("lspconfig").pylsp.setup {
   capabilities = capabilities,
   filetypes = { "python" },
   cmd = { "pylsp" },
+  cmd_env = { VIRTUAL_ENV = "./virtualenv" },
   settings = {
     pylsp = {
       plugins = {
