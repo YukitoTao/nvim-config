@@ -1,36 +1,38 @@
 -- Notify message manager
-require('notify')(
+require("notify")(
   "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install 'python-lsp-server[all]' black isort\n  yarn global add diagnostic-languageserver",
   "info"
 )
 
--- Add additional capabilities supported by nvim-cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
--- Language server protocol
-require('lspconfig').pylsp.setup {
-  capabilities = capabilities,
-  filetypes = { 'python' },
-  cmd = { 'pylsp' },
-  settings = {
-    pylsp = {
-      plugins = {
-        pycodestyle = { 
-          maxLineLength = 80
-        },
-        flake8 = {
-          maxLineLength = 80
-        }
-      }
-    }
-  }
-}
+-- Python for Data Science
+vim.cmd[[let g:slime_target = "neovim"]]
+vim.cmd[[let g:slime_preserve_curpos = 0]]
+vim.cmd[[let g:slime_dont_ask_default = 1]]
+vim.cmd[[let g:slime_cell_delimiter = "#%%"]]
+
+function _G.StartREPL()
+  vim.cmd[[
+    execute 'terminal source virtualenv/bin/activate && ipython'
+  ]]
+  
+  vim.api.nvim_exec([[
+    let t:term_id = b:terminal_job_id
+    wincmd p
+    execute 'let b:slime_config = {"jobid": "'.t:term_id . '"}'
+  ]], true)
+end
+
+vim.api.nvim_set_keymap('n', '<leader>vrepl', ':vsplit<CR><C-w>w:vertical resize 50<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
+vim.api.nvim_set_keymap('n', '<leader>repl', ':split<CR><C-w>j:resize 12<CR>:lua StartREPL()<CR>', { noremap=true, silent=true })
+
+-- Setup Python provider
+vim.cmd[[let g:python3_host_prog="~/.pyenv/shims/python"]]
 
 -- Syntax highlighting
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup {
   ensure_installed = {
-    'python', 'html', 'json', 'jsonc',
+    "python", "html", "json", "jsonc",
   },
   highlight = {
     enable = true,
@@ -48,6 +50,29 @@ require('nvim-treesitter.configs').setup {
       node_decremental = "grm",
     },
   },
+}
+
+-- Language server protocol
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+require("lspconfig").pylsp.setup {
+  capabilities = capabilities,
+  filetypes = { "python" },
+  cmd = { "pylsp" },
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = { 
+          maxLineLength = 120
+        },
+        flake8 = {
+          maxLineLength = 120
+        }
+      }
+    }
+  }
 }
 
 -- Linter setup
@@ -87,20 +112,20 @@ require("lspconfig").diagnosticls.setup {
 }
 
 -- Formatter setup 
-require('formatter').setup {
+require("formatter").setup {
   logging = true,
   filetype = {
     python = {
       function ()
         return {
-          exe = '~/.pyenv/shims/black',
+          exe = "~/.pyenv/shims/black",
           args = {"-"},
           stdin = true,
         }
       end,
       function ()
         return {
-          exe = '~/.pyenv/shims/isort',
+          exe = "~/.pyenv/shims/isort",
           args = {"-"},
           stdin = true,
         }
@@ -108,4 +133,4 @@ require('formatter').setup {
     },
   }
 }
-vim.api.nvim_set_keymap('n', '<leader>p', ':Format<CR>', { noremap=true })
+vim.api.nvim_set_keymap("n", "<leader>p", ":Format<CR>", { noremap=true })

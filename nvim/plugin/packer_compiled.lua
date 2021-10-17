@@ -144,6 +144,10 @@ _G.packer_plugins = {
   ["vim-gitgutter"] = {
     loaded = true,
     path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-gitgutter"
+  },
+  ["vim-slime"] = {
+    loaded = true,
+    path = "/Users/yuki/.local/share/nvim/site/pack/packer/start/vim-slime"
   }
 }
 
