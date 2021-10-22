@@ -58,6 +58,7 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'windwp/nvim-ts-autotag'
   use 'jpalardy/vim-slime'
+  use 'hanschen/vim-ipython-cell'
 
   -- ======================================= --
   --          Commentary Plugins             --
