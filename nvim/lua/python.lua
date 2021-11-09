@@ -1,12 +1,12 @@
 -- Notify message manager
 require("notify")(
-  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install --upgrade 'python-lsp-server[all]' black isort\n  yarn global add diagnostic-languageserver\n\nIgnore this message if those packages already installed.",
+  "Setting Language Server Protocol for Python project...\n\nPlease install following package:\n  pip install --upgrade 'python-lsp-server[all]' black isort pynvim\n  yarn global add diagnostic-languageserver\n\nIgnore this message if those packages already installed.",
   "info"
 )
 
 -- Python for Data Science
 require("notify")(
-  "Setting Data Science project...\n\nPlease install following package to your virutalenv:\n  pip install --upgrade 'ipython[all]' neovim pynvim\n\nIgnore this message if those packages already installed.",
+  "Setting Data Science project...\n\nPlease install following package to your virutalenv:\n  pip install --upgrade 'ipython[all]'\n\nIgnore this message if those packages already installed.",
   "info"
 )
 vim.cmd[[let g:python3_host_prog = 'virtualenv/bin/python3']]
