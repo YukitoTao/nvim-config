@@ -3,7 +3,7 @@ local opts = { noremap = true }
 
 -- Termial shortcuts
 vim.cmd[[:tnoremap <Esc> <C-\><C-n>]]
-keymap('n', '<leader>vt', ':vsplit<CR><C-w>w:vertical resize 50<CR>:terminal<CR>', { noremap=true, silent=true })
+keymap('n', '<leader>vt', ':vsplit<CR><C-w>w:vertical resize 60<CR>:terminal<CR>', { noremap=true, silent=true })
 keymap('n', '<leader>t', ':split<CR><C-w>j:resize 12<CR>:terminal<CR>', { noremap=true, silent=true })
 
 -- Split window switch shortcuts

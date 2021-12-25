@@ -15,7 +15,7 @@ return require('packer').startup(function()
   -- ======================================= --
   --       Syntax Highlight Plugins          --
   --       Theme Plugins                     --
-  --       UI                                --
+  --       UI Plugins                        --
   -- ======================================= --
   use {
     'folke/tokyonight.nvim',

@@ -85,11 +85,11 @@ require("lspconfig").pylsp.setup {
       plugins = {
         pycodestyle = { 
           maxLineLength = 120,
-          ignore = { "E402" }
+          ignore = { "E402", "E203", "W503", "W504" }
         },
         flake8 = {
           maxLineLength = 120,
-          ignore = { "E402" }
+          ignore = { "E402", "E203", "W503", "W504" }
         }
       }
     }
