@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/Users/snoop.py/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["diagnosticls-configs-nvim"] = {
+    loaded = true,
+    path = "/Users/snoop.py/.local/share/nvim/site/pack/packer/start/diagnosticls-configs-nvim",
+    url = "https://github.com/creativenull/diagnosticls-configs-nvim"
+  },
   ["formatter.nvim"] = {
     loaded = true,
     path = "/Users/snoop.py/.local/share/nvim/site/pack/packer/start/formatter.nvim",

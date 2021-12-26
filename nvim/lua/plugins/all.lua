@@ -25,7 +25,10 @@ return require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-
+  use {
+    'creativenull/diagnosticls-configs-nvim',
+    tag = 'v0.1.2'
+  }
   -- ======================================= --
   --             Finder Plugins              --
   -- ======================================= --

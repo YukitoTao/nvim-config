@@ -54,3 +54,26 @@ require('formatter').setup {
 }
 
 vim.api.nvim_set_keymap("n", "<leader>p", ":Format<CR>", { noremap=true })
+
+-- Linter
+require'diagnosticls-configs'.init{}
+require'diagnosticls-configs'.setup{
+  ['swift'] = {
+    linter = {
+      sourceName = 'swiftlint',
+      command = "swiftlint",
+      debounce = 100,
+      args = {
+        'lint',
+        '--use-stdin',
+        "--quiet",
+        "--reporter",
+        "json",
+      },
+      rootPatterns = {
+        '.git',
+      }
+    }
+  }
+}
+
