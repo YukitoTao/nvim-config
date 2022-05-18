@@ -9,3 +9,6 @@ vim.cmd[[:set nofoldenable]]
 vim.opt.autoindent = true
 vim.g.indentLine_char='|'
 vim.opt.foldmethod='indent'
+
+-- JSON quotes
+vim.cmd[[let g:indentLine_conceallevel=0]]
