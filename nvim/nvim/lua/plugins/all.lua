@@ -17,10 +17,7 @@ return require('packer').startup(function()
   --       Theme Plugins                     --
   --       UI Plugins                        --
   -- ======================================= --
-  use {
-    'folke/tokyonight.nvim',
-    branch = 'main'
-  }
+  use 'folke/tokyonight.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -62,6 +59,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-ts-autotag'
   use 'jpalardy/vim-slime'
   use 'hanschen/vim-ipython-cell'
+  use 'razzmatazz/csharp-language-server'
 
   -- ======================================= --
   --          Commentary Plugins             --
