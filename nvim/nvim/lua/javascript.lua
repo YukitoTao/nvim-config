@@ -4,7 +4,7 @@ require('notify')(
 )
 
 -- Code formatter with Prettier & Eslint
-vim.cmd[[nnoremap <leader>p :silent !prettier-eslint % --write<CR>]]
+vim.cmd[[nnoremap <leader>p :silent !prettier % --write<CR>]]
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()

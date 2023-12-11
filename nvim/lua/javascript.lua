@@ -4,11 +4,11 @@ require('notify')(
 )
 
 -- Code formatter with Prettier & Eslint
-vim.cmd[[nnoremap <leader>p :silent !prettier-eslint % --write<CR>]]
+vim.cmd[[nnoremap <leader>p :silent !prettier % --write<CR>]]
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require('lspconfig').html.setup {
   capabilities = capabilities,
@@ -59,7 +59,7 @@ local linters = {
   eslint = {
     sourceName = "eslint",
     command = "./node_modules/.bin/eslint",
-    rootPatterns = {".eslintrc", ".eslintrc.js", "package.json"},
+    rootPatterns = {".eslintrc", ".eslintrc.js", ".eslintrc.json", "package.json"},
     debouce = 1000,
     args = {"--stdin", "--stdin-filename", "%filepath", "--format", "json"},
     parseJson = {

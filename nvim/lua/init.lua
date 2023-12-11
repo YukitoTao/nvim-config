@@ -5,3 +5,5 @@ require('settings.general')
 require('settings.indent')
 require('settings.shortcuts')
 require('settings.completion')
+
+require("toggleterm").setup{}

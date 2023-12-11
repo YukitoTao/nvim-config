@@ -1,6 +1,15 @@
 return require('packer').startup(function()
   -- Package managerment
   use 'wbthomason/packer.nvim'
+  
+  -- ======================================= --
+  --           Outline Viewer Plugins                --
+  -- ======================================= --
+  use 'nvim-lua/plenary.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.5'
+  }
 
   -- ======================================= --
   --     File system explorer Plugins        --
@@ -17,10 +26,7 @@ return require('packer').startup(function()
   --       Theme Plugins                     --
   --       UI Plugins                        --
   -- ======================================= --
-  use {
-    'folke/tokyonight.nvim',
-    branch = 'main'
-  }
+  use 'folke/tokyonight.nvim'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
@@ -28,6 +34,9 @@ return require('packer').startup(function()
   use {
     'creativenull/diagnosticls-configs-nvim',
     tag = 'v0.1.2'
+  }
+  use {
+    'daviddavis/vim-colorpack'
   }
   -- ======================================= --
   --             Finder Plugins              --
@@ -62,6 +71,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-ts-autotag'
   use 'jpalardy/vim-slime'
   use 'hanschen/vim-ipython-cell'
+  use 'razzmatazz/csharp-language-server'
 
   -- ======================================= --
   --          Commentary Plugins             --

@@ -5,7 +5,7 @@ require('notify')(
 
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 require('lspconfig').html.setup {
   capabilities = capabilities,
@@ -13,7 +13,7 @@ require('lspconfig').html.setup {
 
 require('lspconfig').csharp_ls.setup {
   capabilities = capabilities,
-  cmd = { "/Users/snoop.py/.dotnet/tools/csharp-ls" }
+  cmd = { "/Users/yuki/.dotnet/tools/csharp-ls" }
 }
 
 -- Syntax highlighting
